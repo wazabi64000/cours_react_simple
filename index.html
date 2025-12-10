@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blagues en Folie – Cours React + Vite (Version 100% Fun & Bien Expliqué)</title>
+<style>
+:root{--bg:#fffbf0;--p:#ff6b6b;--s:#4ecdc4;--d:#2c3e50;--a:#feca57;--l:#f8f9fa}
+body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:var(--d);line-height:1.6}
+header{background:linear-gradient(135deg,var(--p),var(--s));color:white;text-align:center;padding:4rem 1rem}
+h1{font-size:3.5rem;margin:0;font-weight:900}
+h1 span{font-size:5rem}
+.c{max-width:1100px;margin:3rem auto;padding:0 1rem}
+section{background:white;margin-bottom:3rem;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+.h{background:var(--p);color:white;padding:1.5rem;font-size:1.8rem;font-weight:bold;position:relative}
+.h::after{content:'';position:absolute;bottom:-20px;left:30px;width:0;height:0;border-left:20px solid transparent;border-right:20px solid transparent;border-top:20px solid var(--p)}
+.co{padding:2rem}
+pre{background:#2d2d2d;color:#f8f8f2;padding:1.5rem;border-radius:12px;overflow-x:auto;margin:1.5rem 0}
+.ex{background:var(--l);padding:1.5rem;border-left:6px solid var(--s);margin:2rem 0;border-radius:8px}
+.vulga{background:#ffebef;padding:1.8rem;border-radius:12px;margin:1.5rem 0;border-left:8px solid var(--p);font-weight:bold;font-size:1.15rem;line-height:1.7}
+footer{background:var(--d);color:white;text-align:center;padding:3rem}
+@media(max-width:768px){h1{font-size:2.5rem}h1 span{font-size:3rem}.h{font-size:1.5rem}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Blagues en Folie</h1>
+  <p>Le cours React + Vite le plus drôle et efficace de 2025 – Structure intacte, explications vulgaires mais ultra claires !</p>
+</header>
+
+<div class="c">
+
+<!-- 0 – CLI -->
+<section>
+  <div class="h">0. La CLI : ton terminal est ton pote</div>
+  <div class="co">
+    <div class="vulga">
+      La CLI (Command Line Interface) c’est le terminal noir où tu tapes des commandes comme un vrai hacker. Au lieu de cliquer 50 fois comme un noob, tu tapes 4 lignes et ton projet entier apparaît en 10 secondes. Tout le monde sérieux utilise ça parce que c’est 100 fois plus rapide et puissant que les interfaces graphiques de merde.
+    </div>
+    <p>La CLI = ligne de commande. C’est juste un terminal où tu tapes du texte et ton ordi obéit. C’est 100× plus rapide que cliquer partout.</p>
+    <p>Pourquoi on l’utilise ? Parce que c’est le seul moyen de lancer les outils modernes (Vite, npm, git…).</p>
+    <p>Ouvre ton terminal et tape ça :</p>
+    <pre>npm create vite@latest blagues-en-folie -- --template react
+cd blagues-en-folie
+npm install
+npm run dev</pre>
+    <div class="ex"><strong>Exercice :</strong> Change le nom du projet en "mes-blagues-pourries" et relance. Tu vois la différence ?</div>
+  </div>
+</section>
+
+<!-- 1 – Vite -->
+<section>
+  <div class="h">1. Vite : le Flash Gordon du dev</div>
+  <div class="co">
+    <div class="vulga">
+      Vite c’est le mec qui te fait démarrer ton projet en 0,3 seconde alors que les vieux outils (Create React App) te font attendre 15-30 secondes à chaque fois comme un con devant un feu rouge. En développement il ne compile rien à l’avance, il laisse le navigateur faire le taf → c’est instantané. En production il te sort un build propre et rapide. Bref, si tu utilises pas Vite en 2025, t’es un dinosaure.
+    </div>
+    <p>Vite démarre ton projet en 0,2 seconde (contre 10-20s avec Create React App). Il ne bundle rien en dev → c’est instantané.</p>
+    <p>En prod il utilise Rollup et sort un code ultra-optimisé.</p>
+    <p>Bref : Vite = plaisir immédiat, pas d’attente comme un vieux modem 56k.</p>
+    <div class="ex"><strong>Exercice :</strong> Modifie <code>src/App.jsx</code>, sauvegarde → tu vois le changement instantané ? C’est Vite qui fait la magie.</div>
+  </div>
+</section>
+
+<!-- 2 – React -->
+<section>
+  <div class="h">2. React en 3 phrases</div>
+  <div class="co">
+    <div class="vulga">
+      React c’est la bibliothèque qui te permet de construire des sites où tout se met à jour tout seul quand une donnée change, sans que t’aies à rafraîchir la page ou à toucher au DOM à la main comme un sauvage. Tu écris du HTML dans du JavaScript (JSX), tu découpes tout en petits morceaux réutilisables (composants), et React fait le reste. C’est utilisé par Facebook, Netflix, Instagram… donc ouais, c’est la base.
+    </div>
+    <p>React = bibliothèque pour faire des UI qui se mettent à jour toutes seules quand les données changent.</p>
+    <p>Tu codes des composants (petites briques) que tu réutilises partout.</p>
+    <p>Et grâce aux hooks, tu fais tout en fonctions, sans classes chiantes.</p>
+  </div>
+</section>
+
+<!-- 3 – Composants -->
+<section>
+  <div class="h">3. Composants : les Lego de ton app</div>
+  <div class="co">
+    <div class="vulga">
+      Un composant c’est juste une fonction qui retourne du HTML (JSX). Tu le crées une fois dans un fichier, tu l’importes et tu l’utilises comme une balise perso &lt;Blague /&gt;. C’est la fin du copier-coller débile : tu changes le composant à un endroit, il change partout. C’est propre, c’est clair, c’est la vie.
+    </div>
+    <h3>Code</h3>
+    <pre>// src/components/Blague.jsx
+function Blague() {
+  return (
+&lt;div style={{padding: '20px', border: '3px solid #ff6b6b', borderRadius: '15px', margin: '10px'}}>
+&lt;h3&gt;Pourquoi les plongeurs plongent en arrière ?&lt;/h3&gt;
+&lt;p&gt;Parce que sinon ils tombent dans le bateau !&lt;/p&gt;
+&lt;/div&gt;
+  );
+}
+export default Blague;</pre>
+    <pre>// src/App.jsx
+import Blague from './components/Blague';
+function App() {
+  return (
+&lt;&gt;
+&lt;h1 style={{textAlign:'center'}}&gt;Blagues en Folie&lt;/h1&gt;
+&lt;Blague /&gt;
+&lt;Blague /&gt;
+&lt;Blague /&gt;
+&lt;/&gt;
+  );
+}
+export default App;</pre>
+    <div class="ex"><strong>Exercice 1 :</strong> Crée un composant <code>Punchline</code> qui affiche juste la réponse en gros.<br>
+    <strong>Exercice 2 :</strong> Crée <code>Header</code> et <code>Footer</code> et utilise-les dans App.</div>
+  </div>
+</section>
+
+<!-- 4 – Props -->
+<section>
+  <div class="h">4. Props : les cadeaux entre composants</div>
+  <div class="co">
+    <div class="vulga">
+      Les props c’est quand le composant parent envoie des données au composant enfant, comme passer une bière à ton pote. Le parent décide ce qu’il envoie (&lt;Blague question="..." reponse="..." /&gt;), l’enfant reçoit dans les paramètres de sa fonction ({ question, reponse }) et les affiche. L’enfant ne peut PAS modifier les props, c’est du sens unique → ça évite le bordel total.
+    </div>
+    <pre>// src/components/Blague.jsx
+function Blague({ question, reponse }) {
+  return (
+&lt;div class="blague"&gt;
+&lt;h3&gt;{question}&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;{reponse}&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+  );
+}
+export default Blague;</pre>
+    <pre>// src/App.jsx
+&lt;Blague
+  question="Pourquoi JavaScript est-il triste ?"
+  reponse="Parce qu’il n’a pas de class !"
+/&gt;</pre>
+    <div class="ex"><strong>Exercice :</strong> Crée un tableau de 5 blagues dans App.jsx et fais un .map() pour les afficher toutes avec le même composant Blague.</div>
+  </div>
+</section>
+
+<!-- 5 – useState -->
+<section>
+  <div class="h">5. useState : la mémoire courte du composant</div>
+  <div class="co">
+    <div class="vulga">
+      useState c’est le seul moyen de dire à React : « cette variable-là, je veux qu’elle survive entre les re-renders et que tu rafraîchisses l’écran dès que je la change ». Sans useState, si tu changes une variable normale, rien ne se passe à l’écran. Avec useState, tu as [valeur, fonctionQuiChangeLaValeur], tu appelles la fonction → React re-rend tout proprement.
+    </div>
+    <pre>import { useState } from 'react';
+const blagues = [
+  "Pourquoi les développeurs détestent la nature ? Trop de bugs.",
+  "Comment appelle-t-on un boomerang qui ne revient pas ? Un bâton.",
+  "Pourquoi les oiseaux ne jouent pas à cache-cache ? Parce qu’ils ont toujours le bec qui dépasse."
+];
+function Generateur() {
+  const [index, setIndex] = useState(0);
+  return (
+&lt;div style={{textAlign:'center', margin:'50px'}}&gt;
+&lt;h2&gt;{blagues[index]}&lt;/h2&gt;
+&lt;button onClick={() => setIndex((i) => (i + 1) % blagues.length)}
+              style={{fontSize:'2rem', padding:'15px 30px'}}&gt;
+        Nouvelle blague !
+&lt;/button&gt;
+&lt;/div&gt;
+  );
+}</pre>
+    <div class="ex"><strong>Exercice :</strong> Ajoute un compteur qui affiche "Blague n°X sur Y".<br>
+    <strong>Bonus :</strong> Ajoute un bouton "Précédente".</div>
+  </div>
+</section>
+
+<!-- 6 – useContext -->
+<section>
+  <div class="h">6. useContext : le pot commun de favorites</div>
+  <div class="co">
+    <div class="vulga">
+      useContext c’est le moyen d’avoir un « frigo global » dans ton app : tu crées un Provider tout en haut (dans main.jsx), tu y mets tes données (ici la liste des favorites), et n’importe quel composant, même 10 niveaux plus bas, peut dire « donne-moi les favorites » sans faire passer la donnée à travers 50 props comme un jeu du téléphone arabe à la con. C’est propre, c’est rapide, c’est obligatoire dès que t’as plus de 2-3 niveaux.
+    </div>
+    <pre>// src/context/FavoritesContext.jsx
+import { createContext, useContext, useState } from 'react';
+const FavoritesContext = createContext();
+export function FavoritesProvider({ children }) {
+  const [favorites, setFavorites] = useState([]);
+  const add = (blague) => setFavorites(prev => [...prev, blague]);
+  const remove = (blague) => setFavorites(prev => prev.filter(b => b !== blague));
+  return (
+&lt;FavoritesContext.Provider value={{ favorites, add, remove }}&gt;
+      {children}
+&lt;/FavoritesContext.Provider&gt;
+  );
+}
+export const useFavorites = () => useContext(FavoritesContext);</pre>
+    <pre>// Dans main.jsx
+import { FavoritesProvider } from './context/FavoritesContext';
+ReactDOM.createRoot(document.getElementById('root')).render(
+&lt;FavoritesProvider&gt;
+&lt;App /&gt;
+&lt;/FavoritesProvider&gt;
+);</pre>
+    <div class="ex"><strong>Exercice :</strong> Ajoute un bouton dans chaque blague qui l’ajoute aux favorites.<br>
+        Crée un composant <code>FavoritesList</code> qui affiche la liste.</div>
+  </div>
+</section>
+
+<!-- 7 – Routing -->
+<section>
+  <div class="h">7. React Router : plusieurs pages sans recharger</div>
+  <div class="co">
+    <div class="vulga">
+      Le routing avec React Router c’est juste dire : « quand l’URL est /, montre la page d’accueil, quand c’est /favorites, montre la liste des favorites ». Pas de rechargement de page complet comme dans les années 2000, tout reste fluide, l’état (tes favorites, ton compteur) est conservé, c’est une vraie application moderne (SPA = Single Page Application).
+    </div>
+    <pre>npm install react-router-dom</pre>
+    <pre>// main.jsx
+import { BrowserRouter } from 'react-router-dom';
+&lt;BrowserRouter&gt;
+&lt;FavoritesProvider&gt;
+&lt;App /&gt;
+&lt;/FavoritesProvider&gt;
+&lt;/BrowserRouter&gt;</pre>
+    <pre>// App.jsx
+import { Routes, Route, Link } from 'react-router-dom';
+function Nav() {
+  return (
+&lt;nav style={{padding:'20px', background:'#333', color:'white', textAlign:'center'}}&gt;
+&lt;Link to="/" style={{margin:'0 20px', color:'white'}}&gt;Accueil&lt;/Link&gt;
+&lt;Link to="/favorites" style={{margin:'0 20px', color:'white'}}&gt;Favorites&lt;/Link&gt;
+&lt;/nav&gt;
+  );
+}
+export default function App() {
+  return (
+&lt;&gt;
+&lt;Nav /&gt;
+&lt;Routes&gt;
+&lt;Route path="/" element={&lt;Generateur /&gt;} /&gt;
+&lt;Route path="/favorites" element={&lt;FavoritesList /&gt;} /&gt;
+&lt;/Routes&gt;
+&lt;/&gt;
+  );
+}</pre>
+    <div class="ex"><strong>Exercice :</strong> Ajoute une page /a-propos avec ton nom et une blague sur toi.</div>
+  </div>
+</section>
+
+<!-- 8 – useRef -->
+<section>
+  <div class="h">8. useRef : attraper un élément DOM</div>
+  <div class="co">
+    <div class="vulga">
+      useRef te donne un crochet pour attraper directement un élément HTML (input, div, etc.) et faire des trucs avec sans passer par l’état. Exemple : lire la valeur d’un input au moment du clic, faire un focus automatique, mesurer une taille… Ça ne déclenche pas de re-render à chaque fois (contrairement à useState), donc c’est parfait pour les opérations « sales » sur le DOM.
+    </div>
+    <pre>import { useRef } from 'react';
+function AjoutBlague() {
+  const inputRef = useRef();
+  const ajouter = () => {
+    const nouvelle = inputRef.current.value;
+    if (nouvelle) {
+      alert("Blague ajoutée : " + nouvelle);
+      inputRef.current.value = '';
+      inputRef.current.focus();
+    }
+  };
+  return (
+&lt;div style={{margin:'50px', textAlign:'center'}}&gt;
+&lt;input ref={inputRef} placeholder="Ta blague pourrie ici" style={{fontSize:'1.5rem', padding:'10px'}} /&gt;
+&lt;button onClick={ajouter} style={{fontSize:'1.5rem', padding:'10px 20px'}}&gt;Envoyer&lt;/button&gt;
+&lt;/div&gt;
+  );
+}</pre>
+    <div class="ex"><strong>Exercice final :</strong> Combine tout : générateur + ajout perso + favorites + routing. Tu as maintenant une vraie app à blagues !</div>
+  </div>
+</section>
+
+<!-- FIN -->
+<section>
+  <div class="h" style="background:#feca57;color:#2c3e50">T’AS FINI, FÉLICITATIONS !</div>
+  <div class="co" style="text-align:center;font-size:1.5rem">
+    <p>Tu viens de maîtriser tous les concepts de base + avancés de React moderne.</p>
+    <p>Tu peux maintenant construire n’importe quelle application web qui déchire.</p>
+    <p>Va déployer ça sur Vercel ou Netlify et envoie le lien à tout le monde !</p>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  Made with amour, café et zéro filtre – Décembre 2025
+</footer>
+
+</body>
+</html>
