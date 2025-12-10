@@ -17,13 +17,12 @@ section{background:white;margin-bottom:3rem;border-radius:20px;overflow:hidden;b
 .co{padding:2rem}
 pre{background:#2d2d2d;color:#f8f8f2;padding:1.5rem;border-radius:12px;overflow-x:auto;margin:1.5rem 0}
 .ex{background:var(--l);padding:1.5rem;border-left:6px solid var(--s);margin:2rem 0;border-radius:8px}
-.vulga{background:#ffebef;padding:1.8rem;border-radius:12px;margin:1.5rem 0;border-left:8px solid var(--p);font-weight:bold;font-size:1.15rem;line-height:1.7}
+.vulga{background:#ffebef;padding:2rem;border-radius:16px;margin:2rem 0;border-left:10px solid var(--p);font-weight:bold;font-size:1.3rem;line-height:1.9;color:#c2185b;box-shadow:0 8px 20px rgba(255,107,107,.15)}
 footer{background:var(--d);color:white;text-align:center;padding:3rem}
 @media(max-width:768px){h1{font-size:2.5rem}h1 span{font-size:3rem}.h{font-size:1.5rem}}
 </style>
 </head>
 <body>
-
 <header>
   <h1>Blagues en Folie</h1>
   <p>Le cours React + Vite le plus drôle et efficace de 2025 – Structure intacte, explications vulgaires mais ultra claires !</p>
@@ -36,7 +35,7 @@ footer{background:var(--d);color:white;text-align:center;padding:3rem}
   <div class="h">0. La CLI : ton terminal est ton pote</div>
   <div class="co">
     <div class="vulga">
-      La CLI (Command Line Interface) c’est le terminal noir où tu tapes des commandes comme un vrai hacker. Au lieu de cliquer 50 fois comme un noob, tu tapes 4 lignes et ton projet entier apparaît en 10 secondes. Tout le monde sérieux utilise ça parce que c’est 100 fois plus rapide et puissant que les interfaces graphiques de merde.
+      La CLI c’est le petit carré noir où tu tapes des ordres et ton ordi obéit direct. Au lieu de cliquer comme un noob pendant 10 minutes, tu tapes 4 lignes et ton projet complet apparaît en 15 secondes. TOUS les vrais devs bossent comme ça.
     </div>
     <p>La CLI = ligne de commande. C’est juste un terminal où tu tapes du texte et ton ordi obéit. C’est 100× plus rapide que cliquer partout.</p>
     <p>Pourquoi on l’utilise ? Parce que c’est le seul moyen de lancer les outils modernes (Vite, npm, git…).</p>
@@ -54,7 +53,7 @@ npm run dev</pre>
   <div class="h">1. Vite : le Flash Gordon du dev</div>
   <div class="co">
     <div class="vulga">
-      Vite c’est le mec qui te fait démarrer ton projet en 0,3 seconde alors que les vieux outils (Create React App) te font attendre 15-30 secondes à chaque fois comme un con devant un feu rouge. En développement il ne compile rien à l’avance, il laisse le navigateur faire le taf → c’est instantané. En production il te sort un build propre et rapide. Bref, si tu utilises pas Vite en 2025, t’es un dinosaure.
+      Vite démarre ton projet en 0,3 seconde alors que les vieux outils (Create React App) te font poireauter 20-30 secondes à chaque fois. En dev il compile rien, il laisse le navigateur charger les fichiers direct → c’est INSTANTANÉ. En prod il te sort un build propre et rapide. En 2025, si t’utilises pas Vite, t’es un dinosaure.
     </div>
     <p>Vite démarre ton projet en 0,2 seconde (contre 10-20s avec Create React App). Il ne bundle rien en dev → c’est instantané.</p>
     <p>En prod il utilise Rollup et sort un code ultra-optimisé.</p>
@@ -68,7 +67,7 @@ npm run dev</pre>
   <div class="h">2. React en 3 phrases</div>
   <div class="co">
     <div class="vulga">
-      React c’est la bibliothèque qui te permet de construire des sites où tout se met à jour tout seul quand une donnée change, sans que t’aies à rafraîchir la page ou à toucher au DOM à la main comme un sauvage. Tu écris du HTML dans du JavaScript (JSX), tu découpes tout en petits morceaux réutilisables (composants), et React fait le reste. C’est utilisé par Facebook, Netflix, Instagram… donc ouais, c’est la base.
+      React c’est le cerveau magique qui fait que quand tu changes une donnée (un compteur, une liste), l’écran se met à jour TOUT SEUL sans que t’aies à rafraîchir la page ou à toucher au HTML comme un plouc. Tu écris du HTML dans du JavaScript (c’est du JSX), tu découpes tout en petits morceaux réutilisables (les composants), et React fait tout le sale boulot pour toi. C’est utilisé par Facebook, Netflix, Instagram… donc ouais, c’est LA base.
     </div>
     <p>React = bibliothèque pour faire des UI qui se mettent à jour toutes seules quand les données changent.</p>
     <p>Tu codes des composants (petites briques) que tu réutilises partout.</p>
@@ -81,7 +80,7 @@ npm run dev</pre>
   <div class="h">3. Composants : les Lego de ton app</div>
   <div class="co">
     <div class="vulga">
-      Un composant c’est juste une fonction qui retourne du HTML (JSX). Tu le crées une fois dans un fichier, tu l’importes et tu l’utilises comme une balise perso &lt;Blague /&gt;. C’est la fin du copier-coller débile : tu changes le composant à un endroit, il change partout. C’est propre, c’est clair, c’est la vie.
+      Un composant c’est juste une fonction qui crache du HTML. Tu le fais une fois dans un fichier, tu l’importes, et tu l’utilises comme une balise normale &lt;Blague /&gt;. Tu changes le composant à un endroit → il change PARTOUT. Finie la galère du copier-coller à la con. C’est propre, c’est clair, c’est la vie.
     </div>
     <h3>Code</h3>
     <pre>// src/components/Blague.jsx
@@ -117,7 +116,7 @@ export default App;</pre>
   <div class="h">4. Props : les cadeaux entre composants</div>
   <div class="co">
     <div class="vulga">
-      Les props c’est quand le composant parent envoie des données au composant enfant, comme passer une bière à ton pote. Le parent décide ce qu’il envoie (&lt;Blague question="..." reponse="..." /&gt;), l’enfant reçoit dans les paramètres de sa fonction ({ question, reponse }) et les affiche. L’enfant ne peut PAS modifier les props, c’est du sens unique → ça évite le bordel total.
+      Les props c’est quand le composant papa file des trucs au composant gamin : « tiens, prends cette question et cette réponse ». Le papa décide ce qu’il envoie (&lt;Blague question="..." reponse="..." /&gt;), le gamin reçoit ça dans les paramètres de sa fonction ({ question, reponse }) et il affiche. Le gamin peut lire mais il a pas le droit de modifier → c’est du sens unique, sinon c’est le bordel total.
     </div>
     <pre>// src/components/Blague.jsx
 function Blague({ question, reponse }) {
@@ -138,12 +137,21 @@ export default Blague;</pre>
   </div>
 </section>
 
-<!-- 5 – useState -->
+<!-- 5 – useState (EXPLICATION ULTRA SIMPLE POUR DÉBUTANT) -->
 <section>
-  <div class="h">5. useState : la mémoire courte du composant</div>
+  <div class="h">5. useState : la mémoire du composant</div>
   <div class="co">
     <div class="vulga">
-      useState c’est le seul moyen de dire à React : « cette variable-là, je veux qu’elle survive entre les re-renders et que tu rafraîchisses l’écran dès que je la change ». Sans useState, si tu changes une variable normale, rien ne se passe à l’écran. Avec useState, tu as [valeur, fonctionQuiChangeLaValeur], tu appelles la fonction → React re-rend tout proprement.
+      useState c’est une fonction que tu appelles dans ton composant pour créer une variable spéciale.<br><br>
+      Cette variable spéciale garde sa valeur même quand tu cliques sur un bouton ou que tu fais autre chose.<br><br>
+      Quand tu changes cette variable avec la fonction qui vient avec, React rafraîchit automatiquement l’écran et affiche la nouvelle valeur.<br><br>
+      Sans useState → si tu changes une variable normale, rien ne change à l’écran.<br>
+      Avec useState → tu changes la variable → l’écran se met à jour tout seul.<br><br>
+      Tu écris :<br>
+      <code>const [nombre, setNombre] = useState(0);</code><br>
+      - nombre = la valeur actuelle<br>
+      - setNombre = la fonction pour la changer<br><br>
+      Quand tu fais setNombre(5), React re-rend ton composant et affiche 5 à la place de 0.
     </div>
     <pre>import { useState } from 'react';
 const blagues = [
@@ -168,12 +176,18 @@ function Generateur() {
   </div>
 </section>
 
-<!-- 6 – useContext -->
+<!-- 6 – useContext (EXPLICATION ULTRA SIMPLE POUR DÉBUTANT) -->
 <section>
-  <div class="h">6. useContext : le pot commun de favorites</div>
+  <div class="h">6. useContext : le sac partagé de toute l’app</div>
   <div class="co">
     <div class="vulga">
-      useContext c’est le moyen d’avoir un « frigo global » dans ton app : tu crées un Provider tout en haut (dans main.jsx), tu y mets tes données (ici la liste des favorites), et n’importe quel composant, même 10 niveaux plus bas, peut dire « donne-moi les favorites » sans faire passer la donnée à travers 50 props comme un jeu du téléphone arabe à la con. C’est propre, c’est rapide, c’est obligatoire dès que t’as plus de 2-3 niveaux.
+      useContext c’est une façon de partager des données entre tous les composants sans devoir les passer un par un.<br><br>
+      Tu crées un sac (on l’appelle un Context) tout en haut de ton application.<br>
+      Tu mets dedans ce que tu veux partager (par exemple la liste des blagues favorites).<br><br>
+      Ensuite, n’importe quel composant, même très loin dans l’arbre, peut ouvrir ce sac et prendre ce qu’il y a dedans.<br><br>
+      Le mot « Provider » c’est juste le composant qui porte le sac et le donne à tout le monde.<br>
+      Tu l’entoures autour de ton &lt;App /&gt; dans main.jsx.<br><br>
+      Résultat : tous les composants peuvent accéder aux mêmes données sans galère.
     </div>
     <pre>// src/context/FavoritesContext.jsx
 import { createContext, useContext, useState } from 'react';
@@ -197,7 +211,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 &lt;/FavoritesProvider&gt;
 );</pre>
     <div class="ex"><strong>Exercice :</strong> Ajoute un bouton dans chaque blague qui l’ajoute aux favorites.<br>
-        Crée un composant <code>FavoritesList</code> qui affiche la liste.</div>
+            Crée un composant <code>FavoritesList</code> qui affiche la liste.</div>
   </div>
 </section>
 
@@ -206,7 +220,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <div class="h">7. React Router : plusieurs pages sans recharger</div>
   <div class="co">
     <div class="vulga">
-      Le routing avec React Router c’est juste dire : « quand l’URL est /, montre la page d’accueil, quand c’est /favorites, montre la liste des favorites ». Pas de rechargement de page complet comme dans les années 2000, tout reste fluide, l’état (tes favorites, ton compteur) est conservé, c’est une vraie application moderne (SPA = Single Page Application).
+      Le routing c’est juste dire : « quand l’URL est /, montre la page d’accueil, quand c’est /favorites, montre la liste des favorites ». Pas de rechargement complet de la page comme dans les années 2000. Tout reste fluide, l’état (tes favorites, ton compteur) est conservé. C’est une vraie application moderne (on appelle ça une SPA = Single Page Application).
     </div>
     <pre>npm install react-router-dom</pre>
     <pre>// main.jsx
@@ -241,12 +255,20 @@ export default function App() {
   </div>
 </section>
 
-<!-- 8 – useRef -->
+<!-- 8 – useRef (EXPLICATION ULTRA SIMPLE POUR DÉBUTANT) -->
 <section>
   <div class="h">8. useRef : attraper un élément DOM</div>
   <div class="co">
     <div class="vulga">
-      useRef te donne un crochet pour attraper directement un élément HTML (input, div, etc.) et faire des trucs avec sans passer par l’état. Exemple : lire la valeur d’un input au moment du clic, faire un focus automatique, mesurer une taille… Ça ne déclenche pas de re-render à chaque fois (contrairement à useState), donc c’est parfait pour les opérations « sales » sur le DOM.
+      useRef te permet de prendre un élément HTML (comme un &lt;input&gt;) et de le manipuler directement.<br><br>
+      Tu crées une référence avec useRef().<br>
+      Tu la colles sur l’élément avec ref={maRef}<br>
+      Ensuite tu peux accéder à cet élément avec maRef.current<br><br>
+      Par exemple :<br>
+      - Lire ce que l’utilisateur a tapé : maRef.current.value<br>
+      - Vider le champ : maRef.current.value = ''<br>
+      - Remettre le curseur dedans : maRef.current.focus()<br><br>
+      Contrairement à useState, changer une ref ne rafraîchit PAS l’écran → c’est parfait pour ces petites actions.
     </div>
     <pre>import { useRef } from 'react';
 function AjoutBlague() {
@@ -285,6 +307,5 @@ function AjoutBlague() {
 <footer>
   Made with amour, café et zéro filtre – Décembre 2025
 </footer>
-
 </body>
 </html>
